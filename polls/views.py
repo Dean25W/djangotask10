@@ -8,6 +8,10 @@ from .models import Choice, Question
 
 # Create your views here.
 def index(request):
+    """
+    This function is to welcome you to the polls page
+    
+    """
     return HttpResponse("Hello world. You're at the polls index.")
 
 def detail(request, question_id):
