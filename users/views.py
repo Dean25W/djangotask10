@@ -25,7 +25,9 @@ def register(request):
     
     context = {'form': form}
     return render(request, 'user/register.html', context)
-
+    """
+    The above else statement takes you to the register form
+    """
 def about_us(request):
     return render(request, 'user/about_us.html')
 
