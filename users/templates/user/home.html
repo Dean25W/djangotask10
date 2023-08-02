@@ -1,0 +1,104 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/capstone.css' %}">
+
+{% if user.is_authenticated %}
+<div class="alert alert-success" role="alert">
+    <h3>Welcome {{ user.username }}!</h3>
+    <a href="{% url 'about_us' %}">Find out more about us!</a>
+
+  <div class= "container">
+    <h2 class="title">Latest News & Events</h2>
+  </div>
+
+      <div class="section section-team text-center">
+        <div class="container">
+          <div class="section section-signup" style="background-image: url('https://img.freepik.com/premium-photo/white-abstract-background-design-cyber-punk-sci-fi-style-futuristic-architecture-wiht-copy-space3d-rendering_113717-407.jpg?w=1060'); background-size: cover; background-position: top center; min-height: 700px;">
+          <div class="team">
+            <div class="row">
+              <div class="col-md-4">
+                  <img src="{% static 'Pictures/sagoodnews-clean-city-768x432.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                  <h4 class="title">Community Lake Cleanup</h4>
+                  <p class="category text-primary">News</p>
+                  <p class="description">Johannesburg east community pulls together to clean up local lake!
+                    <a href="#">Click here</a> to read full article.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                  <img src="{% static 'Pictures/bluelightbrigade.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                  <h4 class="title">Blue Light Brigade Strikes Again!</h4>
+                  <p class="category text-primary">News</p>
+                  <p class="description">Blue light maffia find themselves in the lime light followuing a brutality incident.
+                    <a href="#">Click here</a> to read full article.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                  <img src="{% static 'Pictures/FullSizeRender-2.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                  <h4 class="title">Community Food Drive</h4>
+                  <p class="category text-primary">Events</p>
+                  <p class="description">Our party hosts weekly food and clothe drives for people in need!
+                    <a href="#">Click here</a> to find out more.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section-contact-us text-center">
+        <div class="container">
+          <div class="section section-signup" style="background-image: url('https://img.freepik.com/premium-photo/white-abstract-background-design-cyber-punk-sci-fi-style-futuristic-architecture-wiht-copy-space3d-rendering_113717-407.jpg?w=1060'); background-size: cover; background-position: top center; min-height: 700px;">
+          <h2 class="title">Sign Up To Our Newsletter:</h2>
+          <p class="description">Your support matters to us!</p>
+          <div class="row">
+            <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+              <div class="input-group input-lg">
+                <div class="input-group-prepend">
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="First Name...">
+              </div>
+              <div class="input-group input-lg">
+                <div class="input-group-prepend">
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email...">
+              </div>
+              <div class="send-button">
+                <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send me the news!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer footer-default">
+        <div class="container">
+          <nav>
+            <ul>
+              <li>
+                <a href="http://127.0.0.1:8000/about_us">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://127.0.0.1:8000/polls">
+                  Polls
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+</div>
+
+
+{% else %}
+<div class="alert alert-success" role="alert">
+    <h3>Welcome!</h3>
+    <a href="{% url 'register' %}">Signup</a>
+    <a href="{% url 'login' %}">Login</a>
+</div>
+</body>
+
+{% endif %}
+
+</html>
