@@ -8,6 +8,10 @@ def home(request):
     return render(request, 'user/home.html')
 
 def register(request):
+    """
+    This function lets you know you created a account
+    
+    """
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
